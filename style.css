@@ -1,64 +1,78 @@
-body {
-  font-family: Garamond;
-  font-weight: bold;
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Garamond', serif;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f3e8ff; /* pastel purple background */
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3e8ff; /* light pastel purple */
+  text-align: center;
 }
 
 h1 {
-  font-size: 3.5rem;
-  color: #c084fc; /* vibrant pastel purple */
+  font-size: 4rem;
+  color: #a855f7; /* vibrant pastel purple */
+  margin-bottom: 40px;
 }
 
 .choices {
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 .choices button {
-  font-size: 7.5rem;
-  min-width: 160px;
-  margin: 0 10px;
-  border-radius: 250px;
+  font-size: 5rem;
+  width: 120px;
+  height: 120px;
+  margin: 0 15px;
+  border-radius: 50%;
   background-color: #e9d5ff; /* soft purple button */
-  cursor: pointer;
-  transition: background-color 0.5s ease;
   border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .choices button:hover {
   background-color: #c084fc; /* deeper purple on hover */
+  transform: scale(1.1);
 }
 
 #playerDisplay,
 #computerDisplay {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #7e22ce; /* muted purple text */
+  margin-bottom: 10px;
 }
 
 #resultDisplay {
-  font-size: 5rem;
+  font-size: 3rem;
   margin: 30px 0;
   color: #7e22ce;
 }
 
 .scoreDisplay {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #7e22ce;
+  margin-bottom: 10px;
 }
 
-.greenText,
-#playerScoreDisplay {
-  color: #9333ea; /* winning color */
+.greenText {
+  color: #16a34a; /* green for win */
 }
 
-.redText,
-#computerScoreDisplay {
-  color: #e11d48; /* losing color */
+.redText {
+  color: #dc2626; /* red for lose */
 }
 
 .tieText {
-  color: #6b21a8; /* new class for tie message */
+  color: #6b21a8; /* darker purple for tie */
 }
